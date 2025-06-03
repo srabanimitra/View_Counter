@@ -3,7 +3,6 @@
   "advancedMode": "false",
   "language": "en-US",
   "repository": [
-    "android-vpn-client-ics-openvpn",
-    "android-animations"
+    "View_Counter"
   ]
 }
