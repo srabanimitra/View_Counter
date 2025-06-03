@@ -1,19 +1,21 @@
 name: GitHub Profile Views Counter CI
+
 on:
-  schedule:
-    - cron: '0 */6 * * *'
   workflow_dispatch:
+
 jobs:
   release:
     name: GitHub Profile Views Counter Action
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
         with:
           token: ${{ secrets.insights_token }}
-      - uses: actions/setup-node@v2.1.5
+
+      - uses: actions/setup-node@v2
         with:
-          node-version: 14.17.0
+          node-version: 14
+
       - uses: gayanvoice/github-profile-views-counter-action@3.0.0
         env:
           insights_token: ${{ secrets.insights_token }}
